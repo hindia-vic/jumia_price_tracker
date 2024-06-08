@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>input your url</h1>
+<h1>welcome{{user.username}}</h1>
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="search" placeholder="product_url">
+    <input type="text" name="price" placeholder="price your want to be notified">
+    <input type="submit" value="track">
+</form>
+
+{% endblock content %}
